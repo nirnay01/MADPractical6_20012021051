@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         myvideoview.requestFocus()
         myvideoview.start()
         val button=findViewById<FloatingActionButton>(R.id.vb)
-        val intent=Intent(this,youtube::class.java)
-        startActivity(intent)
+        button.setOnClickListener {
+            val intent = Intent(this, youtube::class.java)
+            startActivity(intent)
+        }
     }
 }
